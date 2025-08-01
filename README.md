@@ -19,7 +19,7 @@ BMICalculator is an Android app built with Jetpack Compose that allows users to 
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone <repo-url>
+   git clone https://github.com/Parvshah-01/BMI-Calculator.git
    ```
 2. Open the project in Android Studio
 3. Build and run on an emulator or device (minSdk 24, targetSdk 34)
