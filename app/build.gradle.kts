@@ -42,36 +42,41 @@ android {
 
 dependencies {
     // Compose
-    implementation(libs.androidx.foundation) // For swipeable functionality
-    implementation(libs.ui) // Basic UI components
-    implementation("androidx.compose.material3:material3:1.1.0") // For Material 3 components (including TextField)
-    implementation("androidx.compose.animation:animation:1.7.6") // For animation functionality
-    implementation("androidx.compose.ui:ui-tooling-preview:1.7.6") // For UI preview
-    implementation("androidx.compose.runtime:runtime-livedata:1.7.6") // For LiveData support
+    implementation(libs.androidx.foundation)
+    implementation(libs.ui)
+    implementation("androidx.compose.material3:material3:1.1.0")
+    implementation("androidx.compose.material:material:1.6.5") // ← Added
+    implementation("androidx.compose.animation:animation:1.7.6")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.7.6")
+    implementation("androidx.compose.runtime:runtime-livedata:1.7.6")
+
+    // Gson for JSON
+    implementation("com.google.code.gson:gson:2.10.1") // ← Added
 
     // Lifecycle
-    implementation(libs.androidx.lifecycle.runtime.ktx.v260) // Lifecycle runtime
-    implementation(libs.androidx.lifecycle.livedata.ktx) // LiveData support
-    implementation(libs.androidx.lifecycle.viewmodel.compose) // ViewModel Compose support
+    implementation(libs.androidx.lifecycle.runtime.ktx.v260)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     // Navigation Compose
-    implementation(libs.androidx.navigation.compose) // Navigation Compose support
+    implementation(libs.androidx.navigation.compose)
 
-    // Core libraries
-    implementation(libs.androidx.core.ktx) // Core KTX
-    implementation(libs.androidx.activity.compose.v1100) // Activity Compose support
+    // Core
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.activity.compose.v1100)
 
-    // Optional Compose BOM (Bill of Materials)
-    implementation(platform(libs.androidx.compose.bom.v20250100)) // BOM for Compose
+    // Compose BOM
+    implementation(platform(libs.androidx.compose.bom.v20250100))
 
-    // Testing dependencies
-    testImplementation(libs.junit) // Unit testing
-    androidTestImplementation(libs.junit.v115) // JUnit for Android testing
-    androidTestImplementation(libs.androidx.espresso.espresso.core) // Espresso for UI testing
-    androidTestImplementation(libs.androidx.compose.compose.bom) // Compose BOM for testing
+    // Testing
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.junit.v115)
+    androidTestImplementation(libs.androidx.espresso.espresso.core)
+    androidTestImplementation(libs.androidx.compose.compose.bom)
 
-    // Debugging tools
-    debugImplementation(libs.ui.tooling) // UI tooling for debugging
-    debugImplementation(libs.ui.test.manifest) // UI test manifest for debugging
+    // Debugging
+    debugImplementation(libs.ui.tooling)
+    debugImplementation(libs.ui.test.manifest)
 }
+
 
